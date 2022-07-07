@@ -6,7 +6,7 @@ This project will show, add and delete employee details.
 Employee details will be stored in a dictionary and it will be stored till server runs.
 
 <h3>Setup Steps</h3>
-- Create Virtual Environment by running following command
+- Create Virtual Environment by running following command<br/>
   - <code>python -m venv venv</code>
 - Activate it
   - <code>source venv/bin/activate</code>
