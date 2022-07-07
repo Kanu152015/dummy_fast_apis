@@ -5,31 +5,13 @@ from src.details import emp_data
 app = FastAPI()
 
 
-# @app.get("/greet")
-# async def root():
-#     return {"message": "Hello World"}
-#
-#
-# @app.post("/greet")
-# async def root():
-#     return {"message": "Hello World with POST"}
-
 @app.get("/v1/emps/list")
-async def root():
+async def list_emps():
     return {"employees": emp_data}
 
 
-# @app.get("/v1/emps/{emp_id}")
-# async def root(emp_id):
-#     if emp_id.isdigit() and int(emp_id) in emp_data:
-#         return {"employees": emp_data[int(emp_id)]}
-#     else:
-#         return {"error_message": "Employee not found!"}
-
-
 @app.get("/v1/emps/{emp_id}")
-async def root(emp_id: int):
-    # return {"message": emp_id}
+async def get_emp_by_id(emp_id: int):
     if emp_id in emp_data:
         return {"employees": emp_data[emp_id]}
     else:
@@ -37,9 +19,9 @@ async def root(emp_id: int):
 
 
 @app.post("/v1/emps/new")
-async def root(request):
-    # return {"message": request}
+async def create_new_emp(request):
     import json
+
     new_emp = json.loads(request)
     next_num = max(emp_data.keys()) + 1
     emp_data[next_num] = new_emp
@@ -47,8 +29,7 @@ async def root(request):
 
 
 @app.delete("/v1/emps/{emp_id}")
-async def root(emp_id: int):
-    # return {"message": emp_id}
+async def delete_emp_by_id(emp_id: int):
     if emp_id in emp_data:
         del emp_data[emp_id]
         return {"message": "Employee deleted successfully!"}
