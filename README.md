@@ -20,14 +20,14 @@ Employee details will be stored in a dictionary and it will be stored till serve
 
 <h3>End Points</h3>
 - GET    (/v1/emps/list)<br/><br/>
-  - This will list all the employees.<br/><br/>
+This will list all the employees.<br/><br/>
 - GET    (/v1/emps/<emp_id: int>)<br/><br/>
-  - This will give details of employee with provided id.<br/><br/>
+This will give details of employee with provided id.<br/><br/>
 - POST   (/v1/emps/new)<br/><br/>
-  - This will create new employee with provided details in json format.<br/><br/>
+This will create new employee with provided details in json format.<br/><br/>
 - DELETE (/v1/emps/<emp_id: int>)<br/><br/>
-  - This will delete the employee with provided id.<br/><br/>
-  - This will do the hard delete.<br/><br/>
+This will delete the employee with provided id.<br/><br/>
+This will do the hard delete.<br/><br/>
 
 <h3>Code Validation</h3>
 Black and flake8 have been used for code validation.
