@@ -7,7 +7,7 @@ Employee details will be stored in a dictionary and it will be stored till serve
 
 <h3>Setup Steps</h3>
 - Create Virtual Environment by running following command<br/>
-  - <code>python -m venv venv</code><br/>
+  <code>python -m venv venv</code><br/>
 - Activate it<br/>
   - <code>source venv/bin/activate</code><br/>
 - Run requirements.txt file to install packages<br/>
